@@ -1,17 +1,8 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import './globals.css';
 import { Inter, Covered_By_Your_Grace } from 'next/font/google';
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-});
+import Header from '@/components/layout/header';
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -38,8 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${coveredByYourGrace.variable} flex min-h-screen flex-col`}
+        className={` ${inter.className} ${inter.variable} ${coveredByYourGrace.variable} flex min-h-screen flex-col`}
       >
+        <Header />
         <main className="flex flex-1 flex-col">{children}</main>
       </body>
     </html>

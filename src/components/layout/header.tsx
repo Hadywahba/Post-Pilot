@@ -8,12 +8,12 @@ import { navigationMenu } from '../constant/navigation-menu';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="text-gray w-full py-2 font-inter font-medium text-[##222222] text-sm">
+    <header className="text-gray w-full pt-5 font-inter font-medium text-[#222222] text-sm relative z-99">
       <div className="container flex w-full items-center justify-between gap-4">
         <Link href="/">
           <Image
             src="/assets/images/post-pilot.svg.png"
-            alt="E-Learn Logo"
+            alt="postpilot"
             width={120}
             height={120}
             priority
