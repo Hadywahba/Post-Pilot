@@ -2,7 +2,7 @@ import { Trends } from '@/components/constant/trend';
 import Image from 'next/image';
 import React from 'react';
 
-export default function Trend({ id, image, title }: Trends) {
+export default function Trend({  image, title }: Trends) {
   return (
     <section className=''>
       <Image
