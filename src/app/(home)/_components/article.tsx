@@ -1,7 +1,6 @@
 import { Articles } from '@/components/constant/article';
 import Image from 'next/image';
 import React from 'react';
-
 export default function Article({
   title,
   subtitle,
@@ -15,29 +14,29 @@ export default function Article({
     <article className="max-w-[550px] pt-[63px] pb-[72px]">
       <div className="flex flex-col w-full">
         {id === 1 ? (
-          <span className="font-inter font-bold text-[3.7rem] leading-[70px] tracking-[-4px] md:max-w-80">
-            <p className=" font-covered text-primary font-normal leading-[70px] tracking-[-4px] text-[5rem] ">
+          <span className="font-inter font-bold text-[1rem] sm:text-[2rem]  md:text-[3.7rem] md:leading-[70px] md:tracking-[-4px] md:max-w-80">
+            <span className=" font-covered text-primary text-[1rem] sm:text-[2rem] font-normal md:leading-[70px] md:tracking-[-4px] md:text-[5rem] ">
               {title}
-            </p>
+            </span>
             {span}
           </span>
-        ):  id === 2 ? (
-          <span className="font-inter font-bold text-[3.7rem] leading-[70px] tracking-[-4px] ">
-            <span className=" font-covered text-primary font-normal leading-[70px] tracking-[-4px] text-[5rem] ">
+        ) : id === 2 ? (
+          <span className="font-inter font-bold text-[1rem] sm:text-[2rem] md:text-[3.7rem] md:leading-[70px] md:tracking-[-4px] ">
+            <span className=" font-covered text-primary text-[1rem] sm:text-[2rem] font-normal md:leading-[70px] md:tracking-[-4px] md:text-[5rem] ">
               {title}
             </span>
             {span}
           </span>
         ) : (
-          <span className="font-inter font-bold text-[1rem] sm:text-[1rem] md:text-[3.7rem] md:leading-[4.357rem] md:tracking-[-4px] md:max-w-80">
+          <span className="font-inter font-bold text-[1rem] sm:text-[2rem]  md:text-[3.7rem] md:leading-[4.357rem] md:tracking-[-4px] md:max-w-80">
             {title}
-            <span className=" font-covered text-primary font-normal leading-[4.357rem] tracking-[-4px] text-[5rem] ">
+            <span className=" font-covered text-primary font-normal text-[1rem] sm:text-[2rem] md:leading-[4.357rem] md:tracking-[-4px] md:text-[5rem] ">
               {span}
             </span>
           </span>
         )}
 
-        <p className="font-inter font-medium text-xl leading-8.5 text-light-Gray md:max-w-124 my-12">
+        <p className="font-inter font-medium text-base md:text-xl md:leading-8.5 text-light-Gray md:max-w-124 my-12">
           {subtitle}
         </p>
 

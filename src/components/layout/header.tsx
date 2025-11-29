@@ -4,11 +4,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { navigationMenu } from '../constant/navigation-menu';
-
+import { motion } from 'framer-motion';
+import { containerVariant , TopVarient } from '../animation/hero-section-animation';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="text-gray w-full pt-5 font-inter font-medium text-[#222222] text-sm relative z-99">
+    <motion.header
+      variants={containerVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.1 }}
+      className="text-gray w-full pt-5 font-inter font-medium text-[#222222] text-sm relative z-99"
+    >
       <div className="container flex w-full items-center justify-between gap-4">
         <Link href="/">
           <Image
@@ -20,10 +27,10 @@ export default function Header() {
           />
         </Link>
 
-        <nav aria-label="Main menu" className="hidden lg:flex">
+        <nav   aria-label="Main menu" className="hidden lg:flex">
           <ul className="flex items-center justify-center gap-8  ">
             {navigationMenu.map((item) => (
-              <li
+              <motion.li variants={TopVarient}
                 key={item.id}
                 className={`capitalize hover:underline ${
                   item.name.toLowerCase() === 'login'
@@ -36,7 +43,7 @@ export default function Header() {
                 } `}
               >
                 <Link href={item.link}>{item.name}</Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </nav>
@@ -94,6 +101,6 @@ export default function Header() {
           ))}
         </ul>
       </nav>
-    </header>
+    </motion.header>
   );
 }

@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.className} ${inter.variable} ${coveredByYourGrace.variable} flex min-h-screen flex-col`}
+        className={` ${inter.className} ${inter.variable} ${coveredByYourGrace.variable} flex min-h-screen flex-col w-full`}
       >
-        <Header />
-        <main className="flex flex-1 flex-col">{children}</main>
+        <Header /> 
+        <main className="flex flex-1 flex-col w-full">{children}</main>
       </body>
     </html>
   );
