@@ -13,6 +13,8 @@
   --color-light-dark: #2e2f35;
   --color-light-Gray: #58595d;
   --color-mint: #e0f8f2;
+  --color-light-mint: #f3fafa;
+  --color-light-cream: #FDF3EA;
   --font-family-inter: var(--font-inter);
   --font-family-covered: var(--font-covered-by-your-grace);
 }
