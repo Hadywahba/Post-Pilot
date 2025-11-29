@@ -32,7 +32,7 @@ export default function RootLayout({
         className={` ${inter.className} ${inter.variable} ${coveredByYourGrace.variable} flex min-h-screen flex-col w-full`}
       >
         <Header /> 
-        <main className="flex flex-1 flex-col w-full">{children}</main>
+        <main className="flex flex-1 flex-col w-full overflow-hidden">{children}</main>
       </body>
     </html>
   );

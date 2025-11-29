@@ -15,6 +15,9 @@ import {
   RightVarient,
 } from '@/components/animation/hero-section-animation';
 import { articlevarient } from '@/components/animation/article-animation';
+import { brands } from '@/components/constant/brand';
+import { div } from 'motion/react-client';
+import Brand from './_components/brand';
 export default function Home() {
   const images = ['/assets/images/star.png'];
   return (
@@ -240,6 +243,44 @@ export default function Home() {
                 title={art.title}
                 span={art.span}
                 image={art.image}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </section>
+      {/* brand section */}
+      <section className="bg-white  pb-24">
+        <motion.h1
+          variants={LeftVarient}
+          initial="hidden"
+          animate="visible"
+          className="pt-25.5 pb-6 font-bold font-inter text-[1rem] sm:text-[2rem] md:text-[4rem] text-center md:leading-[76px] md:tracking-[-2px] md:max-w-[63.5rem] mx-auto"
+        >
+          Everything your brand needs to <br />
+          <span className="text-primary font-normal text-[1rem] sm:text-[2rem] md:text-[4rem] md:tracking-[-4px]  md:leading-[76px]  font-covered">
+            make your brand unforgettable
+          </span>{' '}
+        </motion.h1>
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-12 ">
+          {brands.map((brand, index) => (
+            <motion.div
+              variants={
+                [1, 2, 3].includes(brand.id)
+                  ? articlevarient.fromLeft
+                  : articlevarient.fromRight
+              }
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.1 }}
+              transition={{ duration: 1.2, delay: index * 0.2 }}
+              key={brand.id}
+            >
+              <Brand
+                id={brand.id}
+                subtitle={brand.subtitle}
+                title={brand.title}
+                image={brand.image}
+                bgColor={brand.bgColor}
               />
             </motion.div>
           ))}
