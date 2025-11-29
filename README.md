@@ -5,7 +5,6 @@ A modern landing page for PostPilot - a postcard marketing platform for ecommerc
 ## 🚀 Tech Stack
 
 - **Next.js 14.2.33** - React framework for production
-- **React 18** - UI library
 - **TypeScript** - Type safety
 - **Tailwind CSS v4** - Utility-first CSS framework
 - **Framer Motion** - Animation library
