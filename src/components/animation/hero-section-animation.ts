@@ -1,17 +1,17 @@
 export const LeftVarient = {
   hidden: { x: '-100vw', opacity: 0 },
   visible: {
-    x: 0,
+    x: "0",
     opacity: 1,
-    transition: { type: 'spring', duration: 1, stiffness: 30 },
+    transition: { type: 'spring' as const, duration: 1, stiffness: 30 },
   },
 };
 
 export const RightVarient = {
   hidden: { x: '100vw' },
   visible: {
-    x: 0,
-    transition: { type: 'spring', duration: 1, stiffness: 30 },
+    x: "0",
+    transition: { type: 'spring' as const, duration: 1, stiffness: 30 },
   },
 };
 
@@ -28,25 +28,25 @@ export const containerVariant = {
 export const TopVarient = {
   hidden: { y: '-100vw', opacity: 0 },
   visible: {
-    y: 0,
+    y: "0",
     opacity: 1,
-    transition: { type: 'spring', duration: 1, stiffness: 30 },
+    transition: { type: 'spring' as const, duration: 1, stiffness: 30 },
   },
 };
 
 export const BottomVarient = {
   hidden: { y: '100vw', opacity: 0 },
   visible: {
-    y: 0,
+    y: "0",
     opacity: 1,
-    transition: { type: 'spring', duration: 1, stiffness: 80 , damping: 30 },
+    transition: { type: 'spring' as const, duration: 1, stiffness: 80 , damping: 30 },
   },
 };
 
 export const imagerVariant = {
   hidden: { x: '100vw' },
   visible: {
-    x: 0,
+    x: "0",
     transition: {
       staggerChildren: 0.6,
     },
