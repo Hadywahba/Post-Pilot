@@ -5,7 +5,10 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { navigationMenu } from '../constant/navigation-menu';
 import { motion } from 'framer-motion';
-import { containerVariant , TopVarient } from '../animation/hero-section-animation';
+import {
+  containerVariant,
+  TopVarient,
+} from '../animation/hero-section-animation';
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -27,10 +30,11 @@ export default function Header() {
           />
         </Link>
 
-        <nav   aria-label="Main menu" className="hidden lg:flex">
+        <nav aria-label="Main menu" className="hidden lg:flex">
           <ul className="flex items-center justify-center gap-8  ">
             {navigationMenu.map((item) => (
-              <motion.li variants={TopVarient}
+              <motion.li
+                variants={TopVarient}
                 key={item.id}
                 className={`capitalize hover:underline ${
                   item.name.toLowerCase() === 'login'

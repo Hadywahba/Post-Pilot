@@ -15,8 +15,8 @@ export default function Brand({  image, subtitle, title , bgColor }: Brands) {
       />
      
      <div className='pt-8 w-[330px h-[134px] px-10'>
-         <h3 className=' font-bold font-inter text-[1.75rem] text-light-dark md:leading-9'>{title}</h3>
-      <p className='font-inter font-medium lg:text-base md:leading-8 text-light-Gray '>{subtitle}</p>
+         <h3 className=' font-bold font-inter text-lg md:text-[1.75rem] text-light-dark md:leading-9'>{title}</h3>
+      <p className='font-inter font-medium text-sm md:lg:text-base md:leading-8 text-light-Gray '>{subtitle}</p>
      </div>
 
     </section>
