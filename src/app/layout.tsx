@@ -1,16 +1,20 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
 import './globals.css';
+import { Inter, Covered_By_Your_Grace } from 'next/font/google';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--font-inter',
 });
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+
+const coveredByYourGrace = Covered_By_Your_Grace({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-covered-by-your-grace',
 });
 
 export const metadata: Metadata = {
@@ -26,9 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}
+        className={` ${inter.className} ${inter.variable} ${coveredByYourGrace.variable} flex min-h-screen flex-col w-full`}
       >
-        <main className="flex flex-1 flex-col">{children}</main>
+        <Header /> 
+        <main className="flex flex-1 flex-col w-full overflow-hidden">{children}</main>
+        <Footer/>
       </body>
     </html>
   );
