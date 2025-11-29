@@ -16,7 +16,6 @@ import {
 } from '@/components/animation/hero-section-animation';
 import { articlevarient } from '@/components/animation/article-animation';
 import { brands } from '@/components/constant/brand';
-import { div } from 'motion/react-client';
 import Brand from './_components/brand';
 import Trend from './_components/trend';
 import { trends } from '@/components/constant/trend';
